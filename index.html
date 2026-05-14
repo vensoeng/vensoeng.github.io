@@ -10,13 +10,14 @@
     <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/126303297?v=4" type="image/png" sizes="307x307" data-id="favicon">
     <link rel="icon" href="https://avatars.githubusercontent.com/u/126303297?v=4" type="image/png" sizes="307x307">
     <!-- Open Graph Meta Tags -->
-    <meta property="og:site_name" content="VenSoeng Portfolio">
-    <meta property="og:title" content="VenSoeng | Creative Developer & IT Educator">
-    <meta property="og:description" content="Programmer at FI and BSc in IT student at NMU. Specialized in full-stack development (Laravel, React) and cinematic creative solutions. Creator of NGConvertor and NG alert.">
-    <meta name="author" content="Sey VenSoeng">
-    <meta name="keywords" content="VenSoeng, vensoeng, វិនសឹង្ហ, ស៊ីម វិនសឹង្ហ, Sey VenSoeng, frontend developer, web developer, Cambodia, JavaScript, HTML, CSS, React, Laravel, web instructor, content creator, portfolio, NGConvertor, NG alert">
+    <meta property="og:site_name" content="VenSoeng">
+    <meta property="og:title" content="Creative Developer & IT solutions">
+    <meta property="og:description" content="Programmer at FI and National Meanchey University (NMU). Specialized in full-stack development and creative solutions.">
+    <meta name="author" content="VenSoeng">
+    <meta name="keywords" content="VenSoeng, vensoeng, វិនសឹង្ហ, ស៊ីម វិនសឹង្ហ, VenSoeng, frontend developer, web developer, Cambodia, JavaScript, HTML, CSS, React, Laravel, web instructor, content creator, portfolio">
     <meta name="creator" content="VenSoeng">
-    <meta property="og:url" content="https://vensoeng.com"> <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vensoeng.github.io"> 
+    <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     <!-- Image Tags -->
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/126303297?v=4">
@@ -26,9 +27,9 @@
     <meta property="og:image:alt" content="VenSoeng Portfolio Preview - Creative Developer">
     <meta property="og:image:type" content="image/png">
     <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="VenSoeng | Creative Developer & IT Educator">
-    <meta name="twitter:description" content="Developer at FI dedicated to the Cambodian software ecosystem through open-source tools and community knowledge sharing.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Creative Developer & IT solutions">
+    <meta name="twitter:description" content="Programmer at FI and National Meanchey University (NMU). Specialized in full-stack development and creative solutions.">
     <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/126303297?v=4">
     <!-- this is google & tailwind css cdn with custom configuration -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -133,6 +134,7 @@
         body {
             background-color: #f9f9fb;
             color: #1a1c1d;
+            scroll-behavior: smooth;
         }
     </style>
     <style>
@@ -147,13 +149,13 @@
 <body class="font-body-md text-body-md">
     <!-- TopAppBar -->
     <header class="w-full top-0 sticky bg-background border-b border-outline-variant z-50">
-        <nav class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-gutter h-20">
+        <nav class="relative flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-gutter h-20">
             <div class="flex items-center gap-2">
                 <span class="font-label-mono font-bold tracking-tighter text-[1.5rem]">VenSoeng</span>
             </div>
             <div class="hidden md:flex items-center gap-stack-lg">
                 <a class="font-label-mono text-label-mono text-primary border-b-2 border-primary transition-colors duration-200"
-                    href="/">About</a>
+                    href="#about">About</a>
                 <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors duration-200"
                     href="#work">Work</a>
                 <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors duration-200"
@@ -161,63 +163,70 @@
                 <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors duration-200"
                     href="https://www.linkedin.com/in/vensoeng/" target="_blank">Contact</a>
             </div>
-            <button class="md:hidden text-primary">
+            <button id="menu-toggle" class="md:hidden text-primary" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu">
                 <span class="material-symbols-outlined" data-icon="menu">menu</span>
             </button>
+            <div id="mobile-menu" class="absolute left-0 right-0 top-full mt-2 hidden flex-col gap-stack-md bg-background border border-outline-variant shadow-lg">
+                <div class="flex flex-col gap-stack-md py-stack-md px-margin-mobile">
+                    <a class="font-label-mono text-label-mono text-primary border-b-2 border-primary transition-colors duration-200"
+                        href="#about">About</a>
+                    <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors duration-200"
+                        href="#work">Work</a>
+                    <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors duration-200"
+                        href="/src/Resume/Seym_Vensoeng_Resume.pdf" target="_blank">Resume</a>
+                    <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors duration-200"
+                        href="https://www.linkedin.com/in/vensoeng/" target="_blank">Contact</a>
+                </div>
+            </div>
         </nav>
     </header>
     <main class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
         <!-- Hero Section: Split Layout -->
-        <section class="flex flex-col md:flex-row min-h-[707px] items-center gap-gutter pt-stack-lg pb-section-gap">
+        <section id="about" data-id="about" class="scroll-mt-[6rem] flex flex-col md:flex-row min-h-[707px] items-center gap-gutter pt-stack-lg pb-section-gap">
             <div class="flex-1 space-y-stack-lg">
                 <h1 class="font-headline-xl text-headline-xl text-primary">Hi! I’m VenSoeng.</h1>
                 <div class="space-y-stack-md text-on-surface-variant max-w-2xl">
                     <p class="font-body-lg text-body-lg">
                         I'm a developer with a strong passion for creating innovative and effective 
-                        <span class="text-secondary font-medium">technology & creative solutions</span>. 
-                        Above all, I love <span class="text-secondary font-medium">sharing IT knowledge</span> 
-                        to inspire learning and growth.
+                        <span class="text-on-tertiary-container border-b border-on-tertiary-container/30 cursor-pointer">technology & creative solutions</span>.
                     </p>
 
                     <p class="font-body-md text-body-md">
                         Educationally, I hold a 
                         <span class="text-on-tertiary-container border-b border-on-tertiary-container/30 cursor-pointer">BSc in Information Technology</span> 
                         from <span class="text-on-tertiary-container border-b border-on-tertiary-container/30 cursor-pointer">National Meanchey University (NMU)</span>, 
-                        where I developed a solid foundation in software development and problem-solving.
+                        where I developed a solid foundation in web-app development and problem solving.
                     </p>
 
                     <p class="font-body-md text-body-md">
-                        Currently, I am a programmer at <span class="text-on-tertiary-container border-b border-on-tertiary-container/30 cursor-pointer">FI</span>. 
-                        My experience includes serving as <span class="text-on-tertiary-container border-b border-on-tertiary-container/30 cursor-pointer">ICT Support Staff</span> 
-                        and a <span class="text-on-tertiary-container border-b border-on-tertiary-container/30 cursor-pointer">Media Content Creator</span> 
-                        at Elegant International School, roles that allowed me to combine technical skills with creative storytelling.
+                        Currently, I'm a programmer at <span class="text-on-tertiary-container border-b border-on-tertiary-container/30 cursor-pointer">FI</span>. 
+                        I have experience as <span class="text-on-tertiary-container border-b border-on-tertiary-container/30 cursor-pointer">ICT Support Staff</span> 
+                        at <span class="text-on-tertiary-container border-b border-on-tertiary-container/30 cursor-pointer">Elegant International School.</span>
+                        that allowed me to combine technical skills with creativity.
                     </p>
 
                     <p class="font-body-md text-body-md">
-                        I am dedicated to supporting the Cambodian software ecosystem through open-source tools such as 
-                        <span class="text-on-tertiary-container border-b border-on-tertiary-container/30 cursor-pointer">NGConvertor</span> 
-                        & <span class="text-on-tertiary-container border-b border-on-tertiary-container/30 cursor-pointer">NG alert</span> 
-                        and community knowledge sharing.
+                        I am dedicated to supporting the Cambodian software ecosystem through open-source tools and community knowledge sharing.
                     </p>
                 </div>
                 <div class="flex gap-stack-md pt-stack-sm">
-                    <a class="w-10 h-10 flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-200"
+                    <a class="w-5 h-8 flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-200"
                         href="mailto:vensoeng.edu.kh@gmail.com">
                         <i class="text-[1.5rem] opacity-[0.7] hover:opacity-100 fa-solid fa-envelope"></i>
                     </a>
-                    <a class="w-10 h-10 flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-200"
+                    <a class="w-5 h-8 flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-200"
                         href="https://www.linkedin.com/in/vensoeng/">
                         <i class="text-[1.5rem] opacity-[0.7] hover:opacity-100 fa-brands fa-linkedin-in"></i>
                     </a>
-                    <a class="w-10 h-10 flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-200"
+                    <a class="w-5 h-8 flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-200"
                         href="https://t.me/vensoeng">
                         <i class="text-[1.5rem] opacity-[0.7] hover:opacity-100 fa-brands fa-telegram"></i>
                     </a>
-                    <a class="w-10 h-10 flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-200"
+                    <a class="w-5 h-8 flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-200"
                         href="https://github.com/vensoeng">
                         <i class="text-[1.5rem] opacity-[0.7] hover:opacity-100 fa-brands fa-github"></i>
                     </a>
-                    <a class="w-10 h-10 flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-200"
+                    <a class="w-5 h-8 flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-200"
                         href="https://vensoeng.vercel.app">
                         <i class="text-[1.5rem] opacity-[0.7] hover:opacity-100 fa-solid fa-globe"></i>
                     </a>
@@ -233,9 +242,11 @@
                 </div>
             </div>
         </section>
-        <!-- Bento Grid Experience -->
+        <!-- Storytelling -->
         <section class="pb-section-gap">
-            <h2 class="font-headline-lg text-headline-lg text-primary mb-stack-lg">My life</h2>
+            <h2 class="font-headline-lg text-headline-lg text-primary mb-stack-lg">
+               Storytelling
+            </h2>
             <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
                 <!-- Large Project -->
                 <div class="md:col-span-8 group cursor-pointer">
@@ -256,7 +267,7 @@
                         </span>
                     </div>
                 </div>
-                <!-- Side Project -->
+                <!-- experience card -->
                 <div class="md:col-span-4 group cursor-pointer flex flex-col">
                     <div
                         class="flex-1 bg-surface-container overflow-hidden rounded-lg mb-stack-md border border-outline-variant/30">
@@ -271,37 +282,82 @@
                         <h3 class="font-headline-lg text-headline-lg text-primary mt-1">First Experience(EIS)</h3>
                     </div>
                 </div>
-                <!-- Three Small Columns -->
+                <!-- Experience & project-->
+                <div class="md:col-span-4 p-stack-lg bg-surface-container-low rounded-lg border border-outline-variant/20 hover:border-primary/50 transition-colors duration-300">
+                    <span class="font-label-mono text-label-mono text-on-secondary-container">2025 – 2026</span>
+                    <h4 class="font-headline-lg text-headline-lg text-primary mt-2">NGConvertor</h4>
+                    <p class="text-on-surface-variant mt-stack-md font-body-md">
+                        NGConvertor enables developers to seamlessly convert numbers between Khmer and English (Arabic) numerals @1.0.0.
+                        NGConvertor@2.1.0 add new feature that converts numbers to Khmer text.
+                    </p>
+                </div>
+                <!-- card 2 -->
+                <div class="md:col-span-4 p-stack-lg bg-surface-container-low rounded-lg border border-outline-variant/20 hover:border-primary/50 transition-colors duration-300">
+                    <span class="font-label-mono text-label-mono text-on-secondary-container">2025 – 2026</span>
+                    <h4 class="font-headline-lg text-headline-lg text-primary mt-2">NGAlert</h4>
+                    <p class="text-on-surface-variant mt-stack-md font-body-md">
+                        NGAlert enables developers to seamlessly display alerts and notifications in their web applications.
+                        @JavaScript
+                    </p>
+                </div>
+                <!-- card 3 -->
+                <div class="md:col-span-4 p-stack-lg bg-surface-container-low rounded-lg border border-outline-variant/20 hover:border-primary/50 transition-colors duration-300">
+                    <span class="font-label-mono text-label-mono text-on-secondary-container">2025 – 2026</span>
+                    <h4 class="font-headline-lg text-headline-lg text-primary mt-2">zuAcar</h4>
+                    <p class="text-on-surface-variant mt-stack-md font-body-md">
+                        Developed website using odoo web service for managing car rental, including property listings, booking from.
+                        @using pyhton odoo API. JavaScript, HTML, CSS (Front-end) and Python (Back-end).
+                    </p>
+                </div>
+                <!-- card 4 -->
+                <div
+                    class="md:col-span-4 p-stack-lg bg-surface-container-low rounded-lg border border-outline-variant/20 hover:border-primary/50 transition-colors duration-300">
+                    <span class="font-label-mono text-label-mono text-on-secondary-container">2025 – 2026</span>
+                    <h4 class="font-headline-lg text-headline-lg text-primary mt-2">zuAhouse</h4>
+                    <p class="text-on-surface-variant mt-stack-md font-body-md">
+                        Developed website using odoo web service for managing house rental, including property listings, booking from.
+                        @using pyhton odoo API. JavaScript, HTML, CSS (Front-end) and Python (Back-end).
+                    </p>
+                </div>
+                <!-- card 5 -->
                 <div
                     class="md:col-span-4 p-stack-lg bg-surface-container-low rounded-lg border border-outline-variant/20 hover:border-primary/50 transition-colors duration-300">
                     <span class="font-label-mono text-label-mono text-on-secondary-container">2024 – 2025</span>
                     <h4 class="font-headline-lg text-headline-lg text-primary mt-2">E-commerce</h4>
                     <p class="text-on-surface-variant mt-stack-md font-body-md">
                         Developed a full-featured e-commerce platform with product listing, shopping cart, order tracking, and user authentication.
+                        @version2.5.0 Laravel (Back-end & Front-end).
                     </p>
                 </div>
-                <div
-                    class="md:col-span-4 p-stack-lg bg-surface-container-low rounded-lg border border-outline-variant/20 hover:border-primary/50 transition-colors duration-300">
+                <!-- card 6 -->
+                <div class="md:col-span-4 p-stack-lg bg-surface-container-low rounded-lg border border-outline-variant/20 hover:border-primary/50 transition-colors duration-300">
                     <span class="font-label-mono text-label-mono text-on-secondary-container">2023 – 2024</span>
                     <h4 class="font-headline-lg text-headline-lg text-primary mt-2">Pagoda</h4>
                     <p class="text-on-surface-variant mt-stack-md font-body-md">
                         Managed monk records, donations, and event scheduling using an older Laravel version.
+                        @version1.5.2 PHP (Back-end & Front-end).
+                        @version2.4.1 Laravel (Back-end & Front-end).
                     </p>
                 </div>
+                <!-- card 7 -->
                 <div class="md:col-span-4 p-stack-lg bg-surface-container-low rounded-lg border border-outline-variant/20 hover:border-primary/50 transition-colors duration-300">
                     <span class="font-label-mono text-label-mono text-on-secondary-container">2023 – 2024</span>
                     <h4 class="font-headline-lg text-headline-lg text-primary mt-2">E-Library</h4>
                     <p class="text-on-surface-variant mt-stack-md font-body-md">
                        Created mobile & web platforms for book management with search and login functionality.
+                       Flutter (Front-end) and Laravel (Back-end)
                     </p>
                 </div>
+                <!-- card 8 -->
                 <div class="md:col-span-4 p-stack-lg bg-surface-container-low rounded-lg border border-outline-variant/20 hover:border-primary/50 transition-colors duration-300">
                     <span class="font-label-mono text-label-mono text-on-secondary-container">2022 – 2023</span>
                     <h4 class="font-headline-lg text-headline-lg text-primary mt-2">Student system</h4>
                     <p class="text-on-surface-variant mt-stack-md font-body-md">
                        Developed interfaces for managing student records.
+                       HTML, CSS, JavaScript, and PHP
                     </p>
                 </div>
+                <!-- card 9 -->
                 <div class="md:col-span-4 p-stack-lg bg-surface-container-low rounded-lg border border-outline-variant/20 hover:border-primary/50 transition-colors duration-300">
                     <span class="font-label-mono text-label-mono text-on-secondary-container">2022 – 2023</span>
                     <h4 class="font-headline-lg text-headline-lg text-primary mt-2">Static Website</h4>
@@ -311,11 +367,11 @@
                 </div>
             </div>
         </section>
-        <!-- Stats / Interests Asymmetric Layout -->
-        <section id="work" class="pb-section-gap grid grid-cols-1 md:grid-cols-12 gap-gutter border-t border-outline-variant pt-stack-lg">
+        <!-- servives -->
+        <section id="work" data-id="work" class="scroll-mt-[6rem] pb-section-gap grid grid-cols-1 md:grid-cols-12 gap-gutter border-t border-outline-variant pt-stack-lg">
             <div class="md:col-span-4">
                 <h2 class="font-label-mono text-label-mono text-on-surface-variant uppercase mb-stack-md">
-                    WORKING & SERVICES
+                    SERVICES & SOLUTIONS
                 </h2>
             </div>
             <div class="md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
@@ -324,7 +380,7 @@
                        Development
                     </h5>
                     <p class="text-on-surface-variant font-body-md">
-                        Experienced in building and developing web applications using technologies such as Laravel, Node.js, React Js. Skilled in creating responsive and user-friendly interfaces.
+                        Developing web applications using technologies such as Laravel, Node.js, React Js. Skilled in creating responsive and user-friendly interfaces.
                     </p>
                 </div>
                 <div class="space-y-stack-sm">
@@ -332,7 +388,7 @@
                        Design
                     </h5>
                     <p class="text-on-surface-variant font-body-md">
-                        Proficient in design tools like adobe photoshop, illustrator. Experienced in creating visually appealing graphics, layouts, and multimedia content for various platforms.
+                        Proficient in design tools like adobe photoshop, illustrator.
                     </p>
                 </div>
                 <div class="space-y-stack-sm">
@@ -340,7 +396,7 @@
                        Content creator
                     </h5>
                     <p class="text-on-surface-variant font-body-md">
-                        Skilled in video editing and content creation, with experience in producing engaging multimedia content for various platforms.
+                        Skilled in video editing and content creation, with experience in EIS adobe premiere pro.
                     </p>
                 </div>
                 <div class="space-y-stack-sm">
@@ -348,8 +404,7 @@
                         Photography
                     </h5>
                     <p class="text-on-surface-variant font-body-md">
-                        Passion for capturing moments and stories through the lens, with a focus on portrait and
-                        street photography.
+                        Experienced in photography, with editing skills using adobe photoshop and lightroom, camera raw, other pluigns.
                     </p>
                 </div>
             </div>
@@ -372,6 +427,7 @@
             </div>
         </div>
     </footer>
+    <script src="/public/js/app.js"></script>
 </body>
 
 </html>
