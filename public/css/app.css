@@ -1,0 +1,241 @@
+body{
+    background: var(--bg);
+}
+/* =============header================== */
+.wbh.nav{
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--nav-bg);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s var(--ease);
+    border-bottom: 1px solid var(--bgcolor-black);
+}
+.wbh.nav .wbh-bx{
+    max-width: var(--container);
+    height: var(--nav-h);
+    margin: 0 auto;
+}
+.wbh.nav .wbh-bx .row .btn-profile{
+    height: 1.5rem;
+    width: 1.5rem;
+    color: var(--sg-bglight);
+    position: relative;
+    background: transparent;
+    cursor: pointer;
+}
+.wbh.nav .wbh-bx .row.tablink{
+    gap: 1rem;
+}
+.wbh.nav .wbh-bx .row.tablink a{
+    font-size: 14px;
+    color: var(--text);
+    padding: 0rem;
+    background: transparent;
+}
+.wbh.nav .wbh-bx .row.tablink a:hover,
+.wbh.nav .wbh-bx .row.tablink a.active{
+    color: var(--text-2);
+    font-weight: 500;
+}
+.wbh.nav .wbh-bx .row.contact .btn-contact{
+    font-size: 14px;
+    font-weight: 400;
+    height: 1.8rem;
+    padding: 0rem 0.8rem;
+    cursor: pointer;
+    color: var(--sg-bglight);
+    border-radius: var(--radius-lg);
+}
+
+/* ==========this is main=================== */
+#main.wbm{
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+.section-ctn{
+    width: 100%;
+    margin: 0 auto;
+    max-width: var(--container);
+}
+.shr{
+    margin-top: 2rem;
+}
+.shr .shr-bx{
+    gap: 2rem;
+}
+.shr .shr-bx .shr-rw.img{
+    max-width: 450px;
+}
+.shr .shr-rw.text h1{
+    font-size: 3rem;
+    font-weight: 600;
+}
+.shr .shr-rw.text .shrw-bx{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.shr .shr-rw.text blockquote p{
+    color: var(--text-2);
+}
+.shr .shr-rw.text blockquote p span{
+    color: var(--text);
+}
+.shr .shr-rw.text .vensoeng-action-link .df-l{
+    gap: 0.8rem;
+}
+.shr .shr-rw.text .vensoeng-action-link .btn{
+    color: var(--sg-bglight);
+    border-radius: var(--radius-lg);
+}
+.shr .shr-rw.text .vensoeng-action-link .btn-rs{
+    color: var(--sg-color-brand);
+    padding: 0rem;
+    background: transparent;
+    gap: 0.2rem;
+}
+.shr .shr-rw.text .vensoeng-action-link .btn-rs:hover{
+    text-decoration: underline;
+}
+.shr .shr-rw.text .vensoeng-action-link .btn-rs i{
+    font-size: 0.7rem;
+    color: var(--sg-color-brand);
+}
+.shr .shr-rw.text .vensoeng-socail-link .df-l .icon i{
+    color: var(--text-2);
+}
+/* ===========Experience========================= */
+.erc .erc-title .erct-box{
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+.erc .erc-title .erct-box p{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.erc .erc-title .erct-box h2{
+    font-size: 3rem;
+}
+.ercc-bx{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+.ercc-bx .ercli{
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--bg-alt);
+}
+.ercc-bx .ercli:hover{
+    box-shadow: var(--shadow-hover);
+    background: var(--bg);
+}
+.ercc-bx .ercli-bx{
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+}
+.ercc-bx .ercli-bx blockquote h3{
+    font-size: 1.75rem;
+}
+.ercc-bx .ercli-bx blockquote p{
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+.ercc-bx .ercli-bx .action{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    rotate: 315deg;
+}
+/* =================project sumerices================ */
+.psr .erct-box{
+    text-align: center;
+}
+.psr .psr-bx{
+    gap: 1rem;
+}
+.psr .psrli h3{
+    font-size: 1.75rem;
+    text-align: center;
+}
+/* ===========Recent Projects========================= */
+.rps .ercli{
+    border-radius: var(--radius);
+    background: var(--bg-alt);
+}
+.rps .ercli .ercli-bx{
+    padding: 1.5rem;
+}
+.rps .ercli .ercli-bx blockquote{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.rps .ercli .ercli-bx p.txt{
+    text-transform: initial;
+    font-size: 14px;
+}
+.rps .ercli .ercli-bx .btn-demo{
+    color: var(--sg-color-brand);
+    padding: 0rem;
+    background: transparent;
+    gap: 0.2rem;
+    line-height: 0;
+    font-size: 14px;
+    transition: all ease-in-out 0.2s;
+}
+.rps .ercli .ercli-bx .btn-demo i{
+    font-size: 0.7rem;
+    color: var(--sg-color-brand);
+}
+.rps .ercli .ercli-bx .btn-demo:hover{
+    margin-left: 0.5rem;
+}
+.rps .ercli .ercli-bx .pr-created{
+    border-radius: var(--radius-lg);
+    background: var(--sg-bglight);
+    line-height: 0;
+    font-size: 14px;
+    padding: 0rem 0.5rem;
+}
+/* language and tool */
+.lgt .lgtc{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.lgt .lgtc ul{
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(5, 1fr);
+}
+.lgt .lgtc ul li .bx{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.lgt .lgtc ul li .img.icon{
+    width: 60px;
+    margin: 0 auto;
+    overflow: initial;
+    border-radius: 0rem;
+    height: max-content;
+    filter: brightness(1.2) grayscale(1);
+}
+.lgt .lgtc ul li .txt p{
+    text-align: center;
+}
+
+
+/* =================this is footer====================== */
+.wbf{
+    height: var(--nav-h);
+}
