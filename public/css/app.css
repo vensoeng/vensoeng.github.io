@@ -1,5 +1,9 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     background: var(--bg);
+    scroll-behavior: smooth;
 }
 /* =============header================== */
 .wbh.nav{
@@ -32,7 +36,7 @@ body{
     cursor: pointer;
 }
 .wbh.nav .wbh-bx .row.tablink{
-    gap: 1rem;
+    gap: 1.75rem;
 }
 .wbh.nav .wbh-bx .row.tablink a{
     font-size: 14px;
@@ -252,6 +256,9 @@ body:has(.wbas.active){
     top: 0.5rem;
     right: 0.5rem;
     rotate: 315deg;
+}
+.ifm-box .ercli > .icon{
+    display: none;
 }
 /* =================project sumerices================ */
 .psr .erct-box{
@@ -521,10 +528,16 @@ body:has(.wbas.active){
     .footer-container{
         margin: 0rem 0.8rem;
     }
+    .erc .erc-title .erct-box{
+        padding-bottom: 2rem;
+    }
 }
 @media only screen and (max-width: 850px){
     .shr .shr-bx .shr-rw.img{
         max-width: 350px;
+    }
+    .erc .erc-title .erct-box{
+        padding-bottom: 1rem;
     }
 }
 @media only screen and (max-width: 750px){
@@ -564,6 +577,58 @@ body:has(.wbas.active){
     .wbh.nav .wbh-bx .row.contact .btn-toggle i{
         font-size: 1.1rem;
     }
+    .lgt .lgtc ul li .img.icon{
+        width: 40px;
+    }
+    .ifm-box{
+        gap: 0rem;
+    }
+    .ifm-box .ercli{
+        overflow: hidden;
+        position: relative;
+        border-top: 1px solid var(--bgcolor-black);
+    }
+    .ifm-box .ercli blockquote h3{
+        min-height: var(--nav-h);
+        font-size: 1rem;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0rem;
+        position: relative;
+        z-index: 2;
+    }
+    .ifm-box .ercli blockquote .txt{
+        overflow: hidden;
+        height: 0rem;
+        opacity: 0;
+        transition: all ease-in-out 0.5s;
+    }
+    .ifm-box .ercli.active blockquote .txt{
+        opacity: 1;
+        padding-bottom: 1rem;
+        opacity: 0rem;
+        height: max-content;
+        transition: all ease-in-out 0.5s;
+    }
+    .ifm-box .ercli > .icon{
+        display: flex;
+        position: absolute;
+        right: 0.8rem;
+        top: 0rem;
+        border-radius: 0rem;
+        height: var(--nav-h);
+        opacity: 0.9;
+        transition: all ease-in-out 0.5s;
+    }
+    .ifm-box .ercli.active > .icon{
+        rotate: 180deg;
+    }
+    .ifm-box .ercli > .icon:hover,
+    .ifm-box .ercli > .icon:active{
+        box-shadow: none;
+        user-select: none;
+    }
 }
 @media only screen and (max-width: 600px){
     .ercc-bx{
@@ -575,9 +640,6 @@ body:has(.wbas.active){
     .shr .shr-rw.text h1{
         font-size: 2rem;
     }
-    .lgt .lgtc ul li .img.icon{
-        width: 50px;
-    }
     .footer-legal-links,
     .footer-copyright{
         margin: 0 auto;
@@ -587,6 +649,9 @@ body:has(.wbas.active){
     }
     .lgt .lgtc ul li .txt p{
         font-size: 0.8rem;
+    }
+    .lgt .lgtc ul li .img.icon{
+        width: 35px;
     }
 }
 @media only screen and (max-width: 450px){

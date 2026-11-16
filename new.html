@@ -22,18 +22,17 @@
                 </div>
             </div>
             <div class="row tablink df-c">
-                <a href="/" class="btn">About</a>
-                <a href="/" class="btn">Experience</a>
-                <a href="/" class="btn">Background</a>
-                <a href="/" class="btn">Solutions</a>
-                <a href="/" class="btn">Information</a>
+                <a href="#experience" class="btn">Experience</a>
+                <a href="#projects" class="btn">Projects</a>
+                <a href="#solutions" class="btn">Solutions</a>
+                <a href="#information" class="btn">Information</a>
                 <a href="/" class="btn">Resume</a>
             </div>
             <div class="row contact df-r">
-                <div class="btn btn-contact">Contact</div>
-                <div class="dn icon icon-ra btn-sms">
+                <a href="https://t.me/vensoeng" class="btn btn-contact">Contact</a>
+                <a href="https://t.me/vensoeng" class="dn icon icon-ra btn-sms">
                     <svg viewBox="0 0 24 24" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.5997 2.37562 15.1116 3.04346 16.4525C3.22094 16.8088 3.28001 17.2161 3.17712 17.6006L2.58151 19.8267C2.32295 20.793 3.20701 21.677 4.17335 21.4185L6.39939 20.8229C6.78393 20.72 7.19121 20.7791 7.54753 20.9565C8.88837 21.6244 10.4003 22 12 22Z" fill="#1C274C"></path><path d="M15 12C15 12.5523 15.4477 13 16 13C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11C15.4477 11 15 11.4477 15 12Z" fill="white"></path><path d="M11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12Z" fill="white"></path><path d="M7 12C7 12.5523 7.44772 13 8 13C8.55228 13 9 12.5523 9 12C9 11.4477 8.55228 11 8 11C7.44772 11 7 11.4477 7 12Z" fill="white"></path></g></svg>
-                </div>
+                </a>
                 <div class="dn btn btn-toggle" onclick="document.querySelector('.wbas').classList.toggle('active')">
                     <i class="fa-solid fa-bars"></i>
                 </div>
@@ -48,13 +47,13 @@
             </div>
             <div class="asli scroll-y">
                 <div class="asli-bx">
-                    <a href="/" class="aslink">About</a>
-                    <a href="/" class="aslink">Experience</a>
-                    <a href="/" class="aslink">Background</a>
-                    <a href="/" class="aslink">Solutions</a>
-                    <a href="/" class="aslink">Information</a>
+                    <a href="#" class="aslink" onclick="document.querySelector('.wbas').classList.toggle('active');">Home</a>
+                    <a href="#experience" class="aslink" onclick="document.querySelector('.wbas').classList.toggle('active');">Experience</a>
+                    <a href="#projects" class="aslink" onclick="document.querySelector('.wbas').classList.toggle('active');">Projects</a>
+                    <a href="#solutions" class="aslink" onclick="document.querySelector('.wbas').classList.toggle('active');">Solutions</a>
+                    <a href="#information" class="aslink" onclick="document.querySelector('.wbas').classList.toggle('active');">Information</a>
                     <a href="/" class="aslink">Resume</a>
-                    <a href="/" class="aslink">contact</a>
+                    <a href="https://t.me/vensoeng" class="aslink">contact</a>
                 </div>
             </div>
         </div>
@@ -163,7 +162,7 @@
             </div>
         </section>
         <!-- Recent Projects -->
-        <section class="erc rps Recent-Projects container section-ctn" id="about" aria-labelledby="Recent-Projects">
+        <section class="erc rps Recent-Projects container section-ctn" id="projects" aria-labelledby="Recent-Projects">
             <div class="erc-box">
                 <!-- tittle  -->
                 <div class="erc-title" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
@@ -538,7 +537,7 @@
             </div>
         </section>
         <!-- Services & Solutions -->
-        <section class="erc rps Services-Solutions container section-ctn" id="Services-Solutions" aria-labelledby="Services-Solutions">
+        <section class="erc rps Services-Solutions container section-ctn" id="solutions" aria-labelledby="Services-Solutions">
             <div class="erc-box">
                 <!-- tittle  -->
                 <div class="erc-title" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
@@ -609,7 +608,7 @@
         <!-- information  -->
         <section class="ifm information container section-ctn" id="information" aria-labelledby="information">
             <div class="ifm-box">
-                <article class="ercli" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
+                <article class="ercli" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000" onclick="this.classList.toggle('active')">
                     <div class="ercli-bx">
                         <blockquote>
                             <h3>Education</h3>
@@ -618,8 +617,11 @@
                             </p>
                         </blockquote>
                     </div>
+                    <div class="icon icon-ra icon-sm">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
                 </article>
-                <article class="ercli"  data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
+                <article class="ercli"  data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000" onclick="this.classList.toggle('active')">
                     <div class="ercli-bx">
                         <blockquote>
                             <h3>Technical Skills</h3>
@@ -628,8 +630,11 @@
                             </p>
                         </blockquote>
                     </div>
+                    <div class="icon icon-ra icon-sm">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
                 </article>
-                <article class="ercli"  data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
+                <article class="ercli"  data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000" onclick="this.classList.toggle('active')">
                     <div class="ercli-bx">
                         <blockquote>
                             <h3>Soft Skills</h3>
@@ -638,8 +643,11 @@
                             </p>
                         </blockquote>
                     </div>
+                    <div class="icon icon-ra icon-sm">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
                 </article>
-                <article class="ercli"  data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
+                <article class="ercli"  data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000" onclick="this.classList.toggle('active')">
                     <div class="ercli-bx">
                         <blockquote>
                             <h3>Languages</h3>
@@ -648,8 +656,11 @@
                             </p>
                         </blockquote>
                     </div>
+                    <div class="icon icon-ra icon-sm">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
                 </article>
-                <article class="ercli" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
+                <article class="ercli" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000" onclick="this.classList.toggle('active')">
                     <div class="ercli-bx">
                         <blockquote>
                             <h3>Awards & Recognition</h3>
@@ -658,8 +669,11 @@
                             </p>
                         </blockquote>
                     </div>
+                    <div class="icon icon-ra icon-sm">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
                 </article>
-                <article class="ercli" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
+                <article class="ercli" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000" onclick="this.classList.toggle('active')">
                     <div class="ercli-bx">
                         <blockquote>
                             <h3>Hobbies & Interests</h3>
@@ -667,6 +681,9 @@
                                 I enjoy exploring web and application development, video editing, graphic design, and emerging technologies. I am passionate about learning new tools, researching innovative IT solutions, and sharing knowledge through personal projects and digital communities.
                             </p>
                         </blockquote>
+                    </div>
+                    <div class="icon icon-ra icon-sm">
+                        <i class="fa-solid fa-angle-down"></i>
                     </div>
                 </article>
             </div>
