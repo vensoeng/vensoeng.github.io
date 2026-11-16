@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="public/css/main.css">
     <link rel="stylesheet" href="public/css/app.css">
     <!-- this is font awesome -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- this is aos animation  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+    <!-- this is header  -->
     <header class="wbh nav" id="nav">
         <div class="wbh-bx df-s">
             <div class="row">
@@ -26,11 +29,38 @@
                 <a href="/" class="btn">Information</a>
                 <a href="/" class="btn">Resume</a>
             </div>
-            <div class="row contact">
+            <div class="row contact df-r">
                 <div class="btn btn-contact">Contact</div>
+                <div class="dn icon icon-ra btn-sms">
+                    <svg viewBox="0 0 24 24" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.5997 2.37562 15.1116 3.04346 16.4525C3.22094 16.8088 3.28001 17.2161 3.17712 17.6006L2.58151 19.8267C2.32295 20.793 3.20701 21.677 4.17335 21.4185L6.39939 20.8229C6.78393 20.72 7.19121 20.7791 7.54753 20.9565C8.88837 21.6244 10.4003 22 12 22Z" fill="#1C274C"></path><path d="M15 12C15 12.5523 15.4477 13 16 13C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11C15.4477 11 15 11.4477 15 12Z" fill="white"></path><path d="M11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12Z" fill="white"></path><path d="M7 12C7 12.5523 7.44772 13 8 13C8.55228 13 9 12.5523 9 12C9 11.4477 8.55228 11 8 11C7.44772 11 7 11.4477 7 12Z" fill="white"></path></g></svg>
+                </div>
+                <div class="dn btn btn-toggle" onclick="document.querySelector('.wbas').classList.toggle('active')">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </div>
         </div>
     </header>
+    <!-- this is aside -->
+    <aside class="wbas">
+        <div class="wbas-bx">
+            <div class="hd df-r" onclick="document.querySelector('.wbas').classList.toggle('active')">
+                <div class="btn btn-close"><i class="fa-solid fa-xmark"></i></div>
+            </div>
+            <div class="asli scroll-y">
+                <div class="asli-bx">
+                    <a href="/" class="aslink">About</a>
+                    <a href="/" class="aslink">Experience</a>
+                    <a href="/" class="aslink">Background</a>
+                    <a href="/" class="aslink">Solutions</a>
+                    <a href="/" class="aslink">Information</a>
+                    <a href="/" class="aslink">Resume</a>
+                    <a href="/" class="aslink">contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="bgo"></div>
+    </aside>
+    <!-- this is content  -->
     <main class="wbm" id="main">
         <!-- hero section  -->
         <section class="hero container shr section-ctn" id="about" aria-labelledby="hero-title">
@@ -50,7 +80,7 @@
                         </blockquote>
                         <blockquote>
                             <p>
-                                Currently, I'm a programmer at <span>Full Integrity co.,LTD </span> I have experience as ICT Support Staff at <span>Elegant International School</span>. that allowed me to combine technical skills with creativity.
+                                Currently, I'm a programmer at <span>Full Integrity co.,LTD </span> I have experience as ICT Support Staff at <span>Elegant International School</span> that allowed me to combine technical skills with creativity.
                             </p>
                         </blockquote>
                         <blockquote>
@@ -89,7 +119,7 @@
         <section class="erc Experience container section-ctn" id="experience" aria-labelledby="Experience">
             <div class="erc-box">
                 <!-- tittle  -->
-                <div class="erc-title">
+                <div class="erc-title" data-aos="fade-up" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
                     <div class="erct-box">
                         <p>Where I Working on</p>
                         <h2>Work Experience</h2>
@@ -99,7 +129,7 @@
                 <div class="ercc">
                     <div class="ercc-bx">
                         <!-- this is list  -->
-                        <article class="ercli">
+                        <article class="ercli" data-aos="fade-up" data-aos="fade-up" data-aos-duration="2000">
                             <div class="ercli-bx">
                                 <a href="#" class="action">
                                     <i class="fa-solid fa-arrow-right"></i>
@@ -114,7 +144,7 @@
                             </div>
                         </article>
                         <!-- this is list  -->
-                        <article class="ercli">
+                        <article class="ercli" data-aos="fade-up" data-aos="fade-up" data-aos-duration="3000">
                             <div class="ercli-bx">
                                 <a href="#" class="action">
                                     <i class="fa-solid fa-arrow-right"></i>
@@ -136,7 +166,7 @@
         <section class="erc rps Recent-Projects container section-ctn" id="about" aria-labelledby="Recent-Projects">
             <div class="erc-box">
                 <!-- tittle  -->
-                <div class="erc-title">
+                <div class="erc-title" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
                     <div class="erct-box">
                         <p>Things I’ve made.</p>
                         <h2>Recent Projects</h2>
@@ -146,7 +176,7 @@
                 <div class="ercc">
                     <div class="ercc-bx">
                         <!-- this is list  -->
-                        <article class="ercli">
+                        <article class="ercli" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
                             <div class="ercli-bx">
                                 <div class="btn pr-created">2025 – 2026</div>
                                 <blockquote>
@@ -160,7 +190,7 @@
                             </div>
                         </article>
                          <!-- this is list  -->
-                        <article class="ercli">
+                        <article class="ercli" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1500">
                             <div class="ercli-bx">
                                 <div class="btn pr-created">2025 – 2026</div>
                                 <blockquote>
@@ -174,7 +204,7 @@
                             </div>
                         </article>
                          <!-- this is list  -->
-                        <article class="ercli">
+                        <article class="ercli" data-aos="fade-up" data-aos="fade-up" data-aos-duration="2000">
                             <div class="ercli-bx">
                                 <div class="btn pr-created">2025 – 2026</div>
                                 <blockquote>
@@ -188,7 +218,7 @@
                             </div>
                         </article>
                         <!-- this is list  -->
-                        <article class="ercli">
+                        <article class="ercli" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
                             <div class="ercli-bx">
                                 <div class="btn pr-created">2025 – 2026</div>
                                 <blockquote>
@@ -202,7 +232,7 @@
                             </div>
                         </article>
                         <!-- this is list  -->
-                        <article class="ercli">
+                        <article class="ercli" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1500">
                             <div class="ercli-bx">
                                 <div class="btn pr-created">2025 – 2026</div>
                                 <blockquote>
@@ -218,7 +248,7 @@
                             </div>
                         </article>
                         <!-- this is list  -->
-                        <article class="ercli">
+                        <article class="ercli" data-aos="fade-up" data-aos="fade-up" data-aos-duration="2000">
                             <div class="ercli-bx">
                                 <div class="btn pr-created">2025 – 2026</div>
                                 <blockquote>
@@ -234,7 +264,7 @@
                             </div>
                         </article>
                         <!-- this is list  -->
-                        <article class="ercli">
+                        <article class="ercli" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
                             <div class="ercli-bx">
                                 <div class="btn pr-created">2025 – 2026</div>
                                 <blockquote>
@@ -250,7 +280,7 @@
                             </div>
                         </article>
                         <!-- this is list  -->
-                        <article class="ercli">
+                        <article class="ercli" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1500">
                             <div class="ercli-bx">
                                 <div class="btn pr-created">2024 – 2025</div>
                                 <blockquote>
@@ -266,7 +296,7 @@
                             </div>
                         </article>
                         <!-- this is list  -->
-                        <article class="ercli">
+                        <article class="ercli" data-aos="fade-up" data-aos="fade-up" data-aos-duration="2000">
                             <div class="ercli-bx">
                                 <div class="btn pr-created">2023 – 2024</div>
                                 <blockquote>
@@ -282,7 +312,7 @@
                             </div>
                         </article>
                         <!-- this is list  -->
-                        <article class="ercli">
+                        <article class="ercli" class="ercli" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
                             <div class="ercli-bx">
                                 <div class="btn pr-created">2023 – 2024</div>
                                 <blockquote>
@@ -298,7 +328,7 @@
                             </div>
                         </article>
                         <!-- this is list  -->
-                        <article class="ercli">
+                        <article class="ercli" class="ercli" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1500">
                             <div class="ercli-bx">
                                 <div class="btn pr-created">2022 – 2023</div>
                                 <blockquote>
@@ -314,7 +344,7 @@
                             </div>
                         </article>
                         <!-- this is list  -->
-                        <article class="ercli">
+                        <article class="ercli" class="ercli" data-aos="fade-up" data-aos="fade-up" data-aos-duration="2000">
                             <div class="ercli-bx">
                                 <div class="btn pr-created">2022 – 2023</div>
                                 <blockquote>
@@ -339,7 +369,7 @@
                 <div class="lgtc">
                     <ul>
                         <!-- html  -->
-                        <li>
+                        <li data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
                             <div class="bx">
                                 <div class="img icon icon-ra icon-sm">
                                     <img src="public/images/lang_html.png" class="img-c" alt="">
@@ -350,7 +380,7 @@
                             </div>
                         </li>
                         <!-- css  -->
-                        <li>
+                        <li data-aos="fade-up" data-aos="fade-up" data-aos-duration="2000">
                             <div class="bx">
                                 <div class="img icon icon-ra icon-sm">
                                     <img src="public/images/lang_css.png" class="img-c" alt="">
@@ -361,7 +391,7 @@
                             </div>
                         </li>
                         <!-- js  -->
-                        <li>
+                        <li data-aos="fade-up" data-aos="fade-up" data-aos-duration="3000">
                             <div class="bx">
                                 <div class="img icon icon-ra icon-sm">
                                     <img src="public/images/lang_js.png" class="img-c" alt="">
@@ -372,7 +402,7 @@
                             </div>
                         </li>
                         <!-- php  -->
-                        <li>
+                        <li data-aos="fade-up" data-aos="fade-up" data-aos-duration="4000">
                             <div class="bx">
                                 <div class="img icon icon-ra icon-sm">
                                     <img src="public/images/lang_php.png" class="img-c" alt="">
@@ -383,7 +413,7 @@
                             </div>
                         </li>
                         <!-- laravel  -->
-                        <li>
+                        <li data-aos="fade-up" data-aos="fade-up" data-aos-duration="5000">
                             <div class="bx">
                                 <div class="img icon icon-ra icon-sm">
                                     <img src="public/images/lang_laravel.png" class="img-c" alt="">
@@ -394,7 +424,7 @@
                             </div>
                         </li>
                         <!-- xampp  -->
-                        <li>
+                        <li data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
                             <div class="bx">
                                 <div class="img icon icon-ra icon-sm">
                                     <img src="public/images/lang_xampp.png" class="img-c" alt="">
@@ -405,7 +435,7 @@
                             </div>
                         </li>
                         <!-- react  -->
-                        <li>
+                        <li data-aos="fade-up" data-aos="fade-up" data-aos-duration="2000">
                             <div class="bx">
                                 <div class="img icon icon-ra icon-sm">
                                     <img src="public/images/lang_react.png" class="img-c" alt="">
@@ -416,7 +446,7 @@
                             </div>
                         </li>
                         <!-- node  -->
-                        <li>
+                        <li data-aos="fade-up" data-aos="fade-up" data-aos-duration="3000">
                             <div class="bx">
                                 <div class="img icon icon-ra icon-sm">
                                     <img src="public/images/lang_node.png" class="img-c" alt="">
@@ -427,7 +457,7 @@
                             </div>
                         </li>
                         <!-- github  -->
-                        <li>
+                        <li data-aos="fade-up" data-aos="fade-up" data-aos-duration="4000">
                             <div class="bx">
                                 <div class="img icon icon-ra icon-sm">
                                     <img src="public/images/lang_github.png" class="img-c" alt="">
@@ -438,7 +468,7 @@
                             </div>
                         </li>
                         <!-- odoo  -->
-                        <li>
+                        <li data-aos="fade-up" data-aos="fade-up" data-aos-duration="5000">
                             <div class="bx">
                                 <div class="img icon icon-ra icon-sm">
                                     <img src="public/images/lang_odoo.png" class="img-c" alt="">
@@ -449,7 +479,7 @@
                             </div>
                         </li>
                         <!-- vercel  -->
-                        <li>
+                        <li data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
                             <div class="bx">
                                 <div class="img icon icon-ra icon-sm">
                                     <img src="public/images/lang_vercel.png" class="img-c" alt="">
@@ -460,7 +490,7 @@
                             </div>
                         </li>
                         <!-- photoshop  -->
-                        <li>
+                        <li data-aos="fade-up" data-aos="fade-up" data-aos-duration="2000">
                             <div class="bx">
                                 <div class="img icon icon-ra icon-sm">
                                     <img src="public/images/creative_photoshop.png" class="img-c" alt="">
@@ -471,7 +501,7 @@
                             </div>
                         </li>
                         <!-- illustractor -->
-                        <li>
+                        <li data-aos="fade-up" data-aos="fade-up" data-aos-duration="3000">
                             <div class="bx">
                                 <div class="img icon icon-ra icon-sm">
                                     <img src="public/images/creative_ai.png" class="img-c" alt="">
@@ -482,7 +512,7 @@
                             </div>
                         </li>
                         <!-- premiere  -->
-                        <li>
+                        <li data-aos="fade-up" data-aos="fade-up" data-aos-duration="4000">
                             <div class="bx">
                                 <div class="img icon icon-ra icon-sm">
                                     <img src="public/images/creative_pr.png" class="img-c" alt="">
@@ -493,7 +523,7 @@
                             </div>
                         </li>
                         <!-- lgithroom  -->
-                        <li>
+                        <li data-aos="fade-up" data-aos="fade-up" data-aos-duration="5000">
                             <div class="bx">
                                 <div class="img icon icon-ra icon-sm">
                                     <img src="public/images/creative_lightroom.png" class="img-c" alt="">
@@ -511,7 +541,7 @@
         <section class="erc rps Services-Solutions container section-ctn" id="Services-Solutions" aria-labelledby="Services-Solutions">
             <div class="erc-box">
                 <!-- tittle  -->
-                <div class="erc-title">
+                <div class="erc-title" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
                     <div class="erct-box">
                         <p>Services & Solutions</p>
                         <h2>What I can do for you.</h2>
@@ -521,7 +551,7 @@
                 <div class="ercc">
                     <div class="ercc-bx">
                         <!-- this is list  -->
-                        <article class="ercli">
+                        <article class="ercli" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
                             <div class="ercli-bx">
                                 <blockquote>
                                     <h3>Development</h3>
@@ -534,7 +564,7 @@
                             </div>
                         </article>
                          <!-- this is list  -->
-                        <article class="ercli">
+                        <article class="ercli" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1500">
                             <div class="ercli-bx">
                                 <blockquote>
                                     <h3>Design</h3>
@@ -547,7 +577,7 @@
                             </div>
                         </article>
                         <!-- this is list  -->
-                        <article class="ercli">
+                        <article class="ercli" data-aos="fade-up" data-aos="fade-up" data-aos-duration="2000">
                             <div class="ercli-bx">
                                 <blockquote>
                                     <h3>Content creation</h3>
@@ -560,7 +590,7 @@
                             </div>
                         </article>
                         <!-- this is list  -->
-                        <article class="ercli">
+                        <article class="ercli"  data-aos="fade-up" data-aos="fade-up" data-aos-duration="2500">
                             <div class="ercli-bx">
                                 <blockquote>
                                     <h3>Photography</h3>
@@ -579,7 +609,7 @@
         <!-- information  -->
         <section class="ifm information container section-ctn" id="information" aria-labelledby="information">
             <div class="ifm-box">
-                <article class="ercli">
+                <article class="ercli" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
                     <div class="ercli-bx">
                         <blockquote>
                             <h3>Education</h3>
@@ -589,7 +619,7 @@
                         </blockquote>
                     </div>
                 </article>
-                <article class="ercli">
+                <article class="ercli"  data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
                     <div class="ercli-bx">
                         <blockquote>
                             <h3>Technical Skills</h3>
@@ -599,7 +629,7 @@
                         </blockquote>
                     </div>
                 </article>
-                <article class="ercli">
+                <article class="ercli"  data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
                     <div class="ercli-bx">
                         <blockquote>
                             <h3>Soft Skills</h3>
@@ -609,7 +639,7 @@
                         </blockquote>
                     </div>
                 </article>
-                <article class="ercli">
+                <article class="ercli"  data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
                     <div class="ercli-bx">
                         <blockquote>
                             <h3>Languages</h3>
@@ -619,7 +649,7 @@
                         </blockquote>
                     </div>
                 </article>
-                <article class="ercli">
+                <article class="ercli" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
                     <div class="ercli-bx">
                         <blockquote>
                             <h3>Awards & Recognition</h3>
@@ -629,7 +659,7 @@
                         </blockquote>
                     </div>
                 </article>
-                <article class="ercli">
+                <article class="ercli" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
                     <div class="ercli-bx">
                         <blockquote>
                             <h3>Hobbies & Interests</h3>
@@ -741,6 +771,10 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
 
