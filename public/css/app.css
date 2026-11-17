@@ -160,13 +160,18 @@ body:has(.wbas.active){
     }
 }
 .shr{
-    margin-top: 2rem;
+    position: relative;
+    margin: 0 auto;
+    z-index: 2;
 }
 .shr .shr-bx{
     gap: 2rem;
+    padding: 2rem;
 }
 .shr .shr-bx .shr-rw.img{
-    max-width: 450px;
+    max-width: 400px;
+    overflow: hidden;
+    border-radius: var(--radius);
 }
 .shr .shr-rw.text h1{
     font-size: 3rem;
@@ -205,6 +210,26 @@ body:has(.wbas.active){
 }
 .shr .shr-rw.text .vensoeng-socail-link .df-l .icon i{
     color: var(--text-2);
+}
+/* =================this is inage back============== */
+.data-hero{
+    position: relative;
+    min-height: 100vh;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0rem;
+}
+.img-back{
+    position: absolute;
+    top: 0rem;
+    width: 100%;
+    height: 100%;
+    left: 0rem;
+    z-index: 0;
+    overflow: hidden;
 }
 /* ===========Experience========================= */
 .erc .erc-title .erct-box{
@@ -536,9 +561,6 @@ body:has(.wbas.active){
     .shr .shr-bx .shr-rw.img{
         max-width: 350px;
     }
-    .erc .erc-title .erct-box{
-        padding-bottom: 1rem;
-    }
 }
 @media only screen and (max-width: 750px){
     .shr .shr-bx .shr-rw.img{
@@ -549,6 +571,8 @@ body:has(.wbas.active){
     .shr .shr-bx{
         flex-direction: column;
         align-items: initial;
+        padding: 1rem 2rem;
+        padding-bottom: 4rem;
     }
     .shr .shr-bx .shr-rw.img{
         margin-left: 0rem;
@@ -556,7 +580,7 @@ body:has(.wbas.active){
 }
 @media only screen and (max-width: 650px){
     #main.wbm{
-        gap: 2rem;
+        gap: 2.5rem;
     }
     .wbh.nav .wbh-bx .row.tablink{
         display: none;
@@ -652,6 +676,43 @@ body:has(.wbas.active){
     }
     .lgt .lgtc ul li .img.icon{
         width: 35px;
+    }
+}
+@media only screen and (max-width: 550px){
+    .shr .shr-bx{
+        margin-top: 1rem;
+        flex-direction: column-reverse;
+    }
+    .shr .shr-bx .shr-rw.img{
+        max-width: initial;
+        width: 100%;
+    }
+    .data-hero{
+        padding-top: 1rem;
+    }
+    .shr .shr-bx{
+        padding: 0rem 0.8rem;
+    }
+    .shr .shr-rw.text{
+        z-index: 2;
+    }
+    .shr .shr-rw.text h1{
+        order: 1;
+        text-align: center;
+    }
+    .shr .shr-rw.text .vensoeng-action-link{
+        order: 2;
+        margin: 0 auto;
+    }
+    .shr .shr-rw.text .vensoeng-socail-link{
+        order: 3;
+        margin: 0 auto;
+    }
+    .shr .shr-rw.text blockquote{
+        order: 4;
+    }
+    .img-back{
+        display: none;
     }
 }
 @media only screen and (max-width: 450px){
